@@ -1,0 +1,41 @@
+---
+title: "Codebook"
+
+
+## Coursera Project Assignment
+
+# HAR(Human Activity Recognization)
+
+This Code book consists of the how the fianl outputs the tidy data sets are obtained with the bunch of code
+
+# Download the file
+ download the file from the web to the workspace using read.table
+#Description of the objects in workspace
+  1.activities- gives the output of code and the activity such as walking,sitting,walking upstairs and downstairs,laying
+  2.features-gives the output of number and the functions with time and frequency of the accelerator,gyroscope
+  3.x_test-gives the test sets of the functions
+  4.y_test-gives the code with 166 rows
+  5.subject_test-gives the subject output
+  6.x_train gives the training sets of the functions
+
+
+## Combining the data sets
+X gives the merged data sets of x_train and x_test by rbind and column bind function
+Y gives the merged data sets of y_train and y_test
+
+## Make the data tidy
+data_merged-contains the merged data and the tidy one with the select function with pipeline operator
+
+##Describing the variable names
+The activity names are done by data_tidy$2
+
+##Giving appropriate names
+The proper names are given to the variables with the names of data_tidy
+
+## The final result
+The Result_final gives the complete final output of the tidy data with the groupby function of subject and the activity
+Finally write the Result_final output are written to the file using write.table
+
+
+
+
